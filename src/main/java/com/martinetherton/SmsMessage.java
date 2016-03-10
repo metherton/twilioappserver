@@ -4,8 +4,10 @@ package com.martinetherton;
  * Created by martin on 10/03/16.
  */
 public class SmsMessage {
-    private final String body;
-    private final String to;
+    private String body;
+    private String to;
+
+    public SmsMessage() {}
 
     public SmsMessage(String body, String to) {
         this.body = body;
