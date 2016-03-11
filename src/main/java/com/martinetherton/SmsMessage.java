@@ -15,11 +15,10 @@ public class SmsMessage {
     }
 
     public String getBody() {
-
-        return "yo";
+        return body;
     }
 
     public String getTo() {
-        return "0031624543741";
+        return to;
     }
 }

@@ -26,13 +26,13 @@ public class TwilioappserverApplication {
 	@Value("${authtoken}")
 	private String authToken;
 
-	@Bean
-	public PropertyPlaceholderConfigurer propertyConfigurer() throws IOException {
-		PropertyPlaceholderConfigurer props = new PropertyPlaceholderConfigurer();
-		//props.setLocations(new Resource[] {new ClassPathResource("instance.properties")});
-		props.setLocations(new Resource[] {new FileSystemResource("/Users/martin/bla.properties")});
-		return props;
-	}
+//	@Bean
+//	public PropertyPlaceholderConfigurer propertyConfigurer() throws IOException {
+//		PropertyPlaceholderConfigurer props = new PropertyPlaceholderConfigurer();
+//		//props.setLocations(new Resource[] {new ClassPathResource("instance.properties")});
+//		props.setLocations(new Resource[] {new FileSystemResource("/etc/appprops/bla.properties")});
+//		return props;
+//	}
 
 	@Bean
 	public SmsController smsController() {
@@ -47,9 +47,9 @@ public class TwilioappserverApplication {
 
 	@Bean
 	public TwilioRestClient twilioRestClient() {
-		//return new TwilioRestClient(accountSid, authToken);
-		TwilioRestClient client = new TwilioRestClient("ACcfe5e87f30326045cdde74d99bfcccf2", "0ce5c20a765ced1f3b2f5b84fbb0f809" );
-		return client;
+		return new TwilioRestClient(accountSid, authToken);
+//		TwilioRestClient client = new TwilioRestClient("ACcfe5e87f30326045cdde74d99bfcccf2", "0ce5c20a765ced1f3b2f5b84fbb0f809" );
+//		return client;
 	}
 
 }

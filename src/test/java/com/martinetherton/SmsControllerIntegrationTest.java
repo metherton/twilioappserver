@@ -37,7 +37,7 @@ public class SmsControllerIntegrationTest {
     @Test
     public void testSendSms() throws Exception {
 
-        SmsMessage smsMessage = new SmsMessage("Hello martin", "123456");
+        SmsMessage smsMessage = new SmsMessage("Hello martin", "0031624543741");
 
         mockMvc.perform(MockMvcRequestBuilders.post("/sms")
                 .content(asJsonString(smsMessage))
