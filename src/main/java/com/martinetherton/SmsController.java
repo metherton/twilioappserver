@@ -28,7 +28,7 @@ public class SmsController {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("Body", smsMessage.getBody()));
         params.add(new BasicNameValuePair("To", smsMessage.getTo()));
-        params.add(new BasicNameValuePair("From", "123456"));
+        params.add(new BasicNameValuePair("From", "+32460203266"));
 
         try {
             messageFactory.create(params);
