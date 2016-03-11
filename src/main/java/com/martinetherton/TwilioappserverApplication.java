@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 
 import java.io.IOException;
@@ -28,7 +29,8 @@ public class TwilioappserverApplication {
 	@Bean
 	public PropertyPlaceholderConfigurer propertyConfigurer() throws IOException {
 		PropertyPlaceholderConfigurer props = new PropertyPlaceholderConfigurer();
-		props.setLocations(new Resource[] {new ClassPathResource("instance.properties")});
+		//props.setLocations(new Resource[] {new ClassPathResource("instance.properties")});
+		props.setLocations(new Resource[] {new FileSystemResource("/Users/martin/bla.properties")});
 		return props;
 	}
 
