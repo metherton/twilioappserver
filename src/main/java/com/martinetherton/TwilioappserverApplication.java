@@ -41,6 +41,12 @@ public class TwilioappserverApplication {
 	}
 
 	@Bean
+	public FeedbackController feedbackController() {
+		FeedbackController feedbackController = new FeedbackController();
+		return feedbackController;
+	}
+
+	@Bean
 	public MessageFactory messageFactory() {
 		return twilioRestClient().getAccount().getMessageFactory();
 	}
